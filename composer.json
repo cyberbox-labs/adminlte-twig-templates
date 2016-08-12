@@ -1,0 +1,14 @@
+{
+    "name": "cyberbox-labs/adminlte-twig-templates",
+    "type": "templates",
+    "description": "Twig tempaltes for AdminLTE",
+    "keywords": ["Twig","AdminLTE","templates"],
+    "homepage": "https://github.com/cyberbox-labs/adminlte-twig-templates",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "Don",
+            "email": "don@cyberbox.org"
+        }
+    ]
+}
