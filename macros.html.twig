@@ -1,0 +1,30 @@
+{% macro table(head, data, keys) %}
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        {% for item in head %}
+          <th>{{ item }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in data %}
+        <tr>
+          {% for key in keys %}
+            <td>{{ attribute(row, key) }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endmacro %}
+
+{% macro page() %}
+  <ul class="pagination pagination-sm no-margin pull-right">
+    <li><a href="#">«</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">»</a></li>
+  </ul>
+{% endmacro %}
