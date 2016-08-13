@@ -1,5 +1,5 @@
 {
-    "name": "cyberbox-labs/adminlte-twig-templates",
+    "name": "cyberbox/adminlte-twig-templates",
     "type": "templates",
     "description": "Twig tempaltes for AdminLTE",
     "keywords": ["Twig","AdminLTE","templates"],
