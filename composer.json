@@ -3,7 +3,7 @@
     "type": "templates",
     "description": "Twig tempaltes for AdminLTE",
     "keywords": ["Twig","AdminLTE","templates"],
-    "homepage": "https://github.com/cyberbox-labs/adminlte-twig-templates",
+    "homepage": "https://github.com/cyberbox-labs/twig-templates",
     "license": "WTFPL",
     "authors": [
         {
