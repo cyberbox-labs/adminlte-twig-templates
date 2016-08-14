@@ -1,7 +1,7 @@
-{% extends '@adminlte/base.html.twig' %}
+{% extends '@' ~ tpl_namespace ~ '/layout/base.html.twig' %}
 
 {% block body %}
-  <body class="hold-transition center-box-layout">
+  <body class="hold-transition center-box-page">
     {{ block('main') }}
     {{ block('foot_js') }}
   </body>

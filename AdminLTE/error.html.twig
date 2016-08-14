@@ -1,0 +1,15 @@
+{% extends '@' ~ tpl_namespace ~ '/layout/error_page_layout.html.twig' %}
+
+{% block title %}服务器错误{% endblock %}
+
+{% block http_code %}
+  <h2 class="headline text-red"> {{ status_code }}</h2>
+{% endblock %}
+
+{% block warn_title %}
+  <h3><i class="fa fa-warning text-red"></i> 服务器错误</h3>
+{% endblock %}
+
+{% block message %}
+  <p>服务器出现意外情况，我们在抓紧修复中。</p>
+{% endblock %}

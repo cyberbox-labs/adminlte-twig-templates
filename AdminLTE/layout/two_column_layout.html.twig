@@ -1,0 +1,58 @@
+{% extends '@' ~ tpl_namespace ~ '/layout/base.html.twig' %}
+
+{% block title %}页面不存在{% endblock %}
+
+{% block css %}
+  {{ parent() }}
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="{{ tpl_config.adminlte_assets_url|default('') }}/dist/css/skins/_all-skins.min.css">
+{% endblock %}
+
+{% block body %}
+  <body class="sidebar-mini exception-page">
+    {{ block('main') }}
+    {{ block('foot_js') }}
+  </body>
+{% endblock %}
+
+{% block main %}
+  <div class="wrapper">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Main content -->
+      <section class="content">
+        <div class="error-page">
+          <h2 class="headline text-yellow"> 404</h2>
+
+          <div class="error-content">
+            <h3><i class="fa fa-warning text-yellow"></i> 哎呀，您访问的页面不存在</h3>
+            <p>
+              您可能输入了错误的网址，或者该页面已删除或移动。
+              <br>
+            </p>
+            <p>
+              [ <a href="{{ app_home_url }}">返回主页</a> ]
+            </p>
+          </div>
+          <!-- /.error-content -->
+        </div>
+        <!-- /.error-page -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+  </div>
+{% endblock %}
+
+{% block foot_js %}
+  {{ parent() }}
+  <!-- SlimScroll -->
+  <script src="{{ tpl_config.adminlte_assets_url|default('') }}/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+  <!-- FastClick -->
+  <script src="{{ tpl_config.adminlte_assets_url|default('') }}/plugins/fastclick/fastclick.js"></script>
+  <!-- AdminLTE App -->
+  <script src="{{ tpl_config.adminlte_assets_url|default('') }}/dist/js/app.min.js"></script>
+  <!-- AdminLTE for demo purposes -->
+  <script src="{{ tpl_config.adminlte_assets_url|default('') }}/dist/js/demo.js"></script>
+{% endblock %}

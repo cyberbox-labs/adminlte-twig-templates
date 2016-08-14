@@ -1,0 +1,52 @@
+{% extends '@' ~ tpl_namespace ~ '/layout/base.html.twig' %}
+
+{% block title %}出错了{% endblock %}
+
+{% block css %}
+  {{ parent() }}
+{% endblock %}
+
+{% block body %}
+  <body class="exception-page">
+    {{ block('main') }}
+    {{ block('foot_js') }}
+  </body>
+{% endblock %}
+
+{% block main %}
+  <div class="wrapper">
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Main content -->
+      <section class="content">
+        <div class="error-page">
+          {% block http_code %}
+            <h2 class="headline text-yellow"> 错误</h2>
+          {% endblock %}
+
+          <div class="error-content">
+            {% block warn_title %}
+              <h3><i class="fa fa-warning text-yellow"></i> 哎呀，出错了</h3>
+            {% endblock %}
+            {% block message %}
+              <p>服务器出错了，我们在抓紧修复中。</p>
+            {% endblock %}
+            <p>
+              [ <a href="{{ app_home_url }}">返回主页</a> ]
+            </p>
+          </div>
+          <!-- /.error-content -->
+        </div>
+        <!-- /.error-page -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+  </div>
+{% endblock %}
+
+{% block foot_js %}
+  {{ parent() }}
+  <!-- AdminLTE App -->
+  <script src="{{ tpl_config.adminlte_assets_url|default('') }}/dist/js/app.min.js"></script>
+{% endblock %}

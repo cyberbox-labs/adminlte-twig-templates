@@ -1,0 +1,15 @@
+{% extends '@' ~ tpl_namespace ~ '/layout/error_page_layout.html.twig' %}
+
+{% block title %}页面不存在{% endblock %}
+
+{% block http_code %}
+  <h2 class="headline text-yellow"> 404</h2>
+{% endblock %}
+
+{% block warn_title %}
+  <h3><i class="fa fa-warning text-yellow"></i> 哎呀，您访问的页面不存在</h3>
+{% endblock %}
+
+{% block message %}
+  <p>您可能输入了错误的网址，或者该页面已删除或移动。</p>
+{% endblock %}
