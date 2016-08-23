@@ -30,7 +30,11 @@
       </section>
       <!-- /.sidebar -->
     </aside>
-    {{ block('content_wrapper') }}
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      {{ block('content_wrapper') }}
+    </div>
+    <!-- /.content-wrapper -->
     <footer class="main-footer">
       {{ block('main_footer') }}
     </footer>
@@ -193,31 +197,27 @@
 {% endblock %}
 
 {% block content_wrapper %}
-  <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
     {{ block('content_header') }}
-    <!-- Main content -->
-    <section class="content">
-      {{ block('main_content') }}
-    </section>
-    <!-- /.content -->
-  </div>
-  <!-- /.content-wrapper -->
+  </section>
+  <!-- Main content -->
+  <section class="content">
+    {{ block('main_content') }}
+  </section>
+  <!-- /.content -->
 {% endblock %}
 
 {% block content_header %}
-  <!-- Content Header (Page header) -->
-  <section class="content-header">
-    <h1>
-      Blank page
-      <small>it all starts here</small>
-    </h1>
-    <ol class="breadcrumb">
-      <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-      <li><a href="#">Examples</a></li>
-      <li class="active">Blank page</li>
-    </ol>
-  </section>
+  <h1>
+    Blank page
+    <small>it all starts here</small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a href="#">Examples</a></li>
+    <li class="active">Blank page</li>
+  </ol>
 {% endblock %}
 
 {% block main_content %}
