@@ -5,9 +5,6 @@
     "keywords": ["Twig","AdminLTE","templates"],
     "homepage": "https://github.com/cyberbox-labs/twig-templates",
     "license": "WTFPL",
-    "autoload": {
-        "psr-4": {"AdminLTE_Twig_Tpl\\": "src/"}
-    },
     "authors": [
         {
             "name": "Don",
