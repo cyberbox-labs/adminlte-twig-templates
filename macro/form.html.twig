@@ -1,55 +1,53 @@
 {% extends '@' ~ tpl_namespace ~ '/layout/form/vertical_layout.html.twig' %}
 
-{% macro start() %}
-  <form action="/project/add" method="post">
+{% macro open() %}
+  <form action="" method="post">
+{% endmacro %}
+
+{% macro close() %}
+  </form>
 {% endmacro %}
 
 {% macro row(form, variable) %}
   {% if (form.name) is defined %}
     {% set name = form.name %}
-  {% else %}
-    {% set name = '' %}
-  {% endif %}
 
-  {% if variable.id is defined %}
-    {% set id = variable.id %}
-  {% else %}
-    {% set id = name %}
-  {% endif %}
+    {% if variable.id is defined %}
+      {% set id = variable.id %}
+    {% else %}
+      {% set id = name %}
+    {% endif %}
 
-  {{ block('form_row') }}
+    {{ block('form_row') }}
+  {% endif %}
 {% endmacro %}
 
 {% macro label(form, variable) %}
   {% if (form.name) is defined %}
     {% set name = form.name %}
-  {% else %}
-    {% set name = '' %}
-  {% endif %}
 
-  {% if variable.id is defined %}
-    {% set id = variable.id %}
-  {% else %}
-    {% set id = name %}
-  {% endif %}
+    {% if variable.id is defined %}
+      {% set id = variable.id %}
+    {% else %}
+      {% set id = name %}
+    {% endif %}
 
-  {{ block('form_label') }}
+    {{ block('form_label') }}
+  {% endif %}
 {% endmacro %}
 
 {% macro widget(form, variable) %}
   {% if (form.name) is defined %}
     {% set name = form.name %}
-  {% else %}
-    {% set name = '' %}
-  {% endif %}
 
-  {% if variable.id is defined %}
-    {% set id = variable.id %}
-  {% else %}
-    {% set id = name %}
-  {% endif %}
+    {% if variable.id is defined %}
+      {% set id = variable.id %}
+    {% else %}
+      {% set id = name %}
+    {% endif %}
 
-  {{ block('form_widget') }}
+    {{ block('form_widget') }}
+  {% endif %}
 {% endmacro %}
 
 {% macro errors(form, variable) %}
