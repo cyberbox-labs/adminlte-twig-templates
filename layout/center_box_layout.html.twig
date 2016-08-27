@@ -2,12 +2,12 @@
 
 {% block body %}
   <body class="hold-transition center-box-page">
-    {{ block('main') }}
+    {{ block('site_wrapper') }}
     {{ block('foot_js') }}
   </body>
 {% endblock %}
 
-{% block main %}
+{% block site_wrapper %}
   <div class="center-box">
     <div class="center-box-logo">
       <a href="{{ app_home_url|default('/') }}">{{ app_name }}</a>
