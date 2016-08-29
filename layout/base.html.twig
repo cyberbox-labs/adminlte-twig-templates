@@ -1,3 +1,4 @@
+{% import '@' ~ tpl_namespace ~ '/macro.html.twig' as macro %}
 <!DOCTYPE html>
 <html>
   <head>
@@ -8,13 +9,13 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     {% block css %}
       <!-- Bootstrap 3.3.6 -->
-      <link rel="stylesheet" href="{{ tpl_config.adminlte_assets_url|default('') }}/bootstrap/css/bootstrap.min.css">
+      {{ macro.link(tpl_config.adminlte_assets_url|default('') ~ '/bootstrap/css/bootstrap.min.css') }}
       <!-- Font Awesome -->
-      <link rel="stylesheet" href="{{ tpl_config.font_awesome_assets_url|default('') }}/css/font-awesome.min.css">
+      {{ macro.link(tpl_config.font_awesome_assets_url|default('') ~ '/css/font-awesome.min.css') }}
       <!-- Ionicons -->
-      <link rel="stylesheet" href="{{ tpl_config.ionicons_assets_url|default('') }}/css/ionicons.min.css">
+      {{ macro.link(tpl_config.ionicons_assets_url|default('') ~ '/css/ionicons.min.css') }}
       <!-- Theme style -->
-      <link rel="stylesheet" href="{{ tpl_config.adminlte_assets_url|default('') }}/dist/css/AdminLTE.min.css">
+      {{ macro.link(tpl_config.adminlte_assets_url|default('') ~ '/dist/css/AdminLTE.min.css') }}
     {% endblock %}
     {% block head_js %}{% endblock %}
   </head>
