@@ -1,0 +1,15 @@
+{% extends '@' ~ tpl_namespace ~ '/layout/error_page_layout.html.twig' %}
+
+{% block title %}拒绝访问{% endblock %}
+
+{% block http_code %}
+  <h2 class="headline text-yellow"> {{ status_code }}</h2>
+{% endblock %}
+
+{% block warn_title %}
+  <h3><i class="fa fa-warning text-yellow"></i> {{ block('title') }}</h3>
+{% endblock %}
+
+{% block message %}
+  <p>{{ exception.message|default('您没有权限查看该页面。') }}</p>
+{% endblock %}

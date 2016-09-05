@@ -1,5 +1,5 @@
 {% macro link(href) %}
 {% spaceless %}
-    <link rel="stylesheet" href="{{ href }}?v={{ tpl_config.assets_version }}">
+    <link rel="stylesheet" href="{{ href }}{% if tpl_config.assets_version is defined %}?v={{ tpl_config.assets_version }}{% endif %}">
 {% endspaceless %}
 {% endmacro %}
